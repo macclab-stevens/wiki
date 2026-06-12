@@ -1,0 +1,175 @@
+/* ================================================================
+   MACC Lab — MkDocs Material Theme
+   OLCF-inspired: dark left sidebar, Cardinal Red #A32035
+   ================================================================ */
+
+/* --- Custom primary/accent palette colors --- */
+:root {
+  --md-primary-fg-color:              #A32035;
+  --md-primary-fg-color--light:       #c2354a;
+  --md-primary-fg-color--dark:        #7d1828;
+  --md-accent-fg-color:               #A32035;
+  --md-accent-fg-color--transparent:  rgba(163, 32, 53, 0.1);
+  --md-primary-bg-color:              #ffffff;
+  --md-primary-bg-color--light:       rgba(255, 255, 255, 0.7);
+}
+
+/* --- Widen content area (OLCF uses ~1200px) --- */
+.md-grid {
+  max-width: 1200px;
+}
+
+/* ================================================================
+   DARK LEFT SIDEBAR — light mode only
+   ================================================================ */
+
+[data-md-color-scheme="default"] .md-sidebar--primary {
+  background-color: #2a2828;
+}
+
+/* Site title / nav back-button strip */
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__title {
+  background-color: #343131;
+  color: #d9d9d9;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Top-most title (site name label) */
+[data-md-color-scheme="default"] .md-nav--primary > .md-nav__title[for="__drawer"] {
+  background-color: #A32035;
+  color: #ffffff;
+}
+
+/* All nav links in the left sidebar */
+[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__link {
+  color: #c8c8c8;
+}
+
+[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__link:hover,
+[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__link:focus {
+  color: #ffffff;
+  background-color: rgba(163, 32, 53, 0.22);
+  border-radius: 2px;
+}
+
+/* Active / current page link */
+[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__item--active > .md-nav__link {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Section header links (navigation.sections top-level labels) */
+[data-md-color-scheme="default"] .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav__link {
+  color: #b8b8b8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+/* Active section header */
+[data-md-color-scheme="default"] .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
+  color: #ffffff;
+  background-color: #A32035;
+  border-radius: 2px;
+}
+
+/* Nested nav list backgrounds */
+[data-md-color-scheme="default"] .md-sidebar--primary .md-nav {
+  background-color: transparent;
+}
+
+/* Sidebar scrollbar */
+[data-md-color-scheme="default"] .md-sidebar--primary .md-sidebar__scrollwrap {
+  scrollbar-color: #555 #2a2828;
+}
+
+/* ================================================================
+   HEADER
+   ================================================================ */
+
+.md-header {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+/* ================================================================
+   CONTENT AREA — links
+   ================================================================ */
+
+[data-md-color-scheme="default"] .md-typeset a {
+  color: #A32035;
+}
+
+[data-md-color-scheme="default"] .md-typeset a:hover {
+  color: #7d1828;
+}
+
+[data-md-color-scheme="default"] .md-typeset a:visited {
+  color: #7d1828;
+}
+
+/* --- Inline code: subtle Cardinal Red tint --- */
+[data-md-color-scheme="default"] .md-typeset code:not(.highlight code) {
+  color: #7d1828;
+  background-color: #fdf5f6;
+  border: 1px solid #e8d0d3;
+}
+
+/* ================================================================
+   ADMONITIONS — tip gets Cardinal Red accent
+   ================================================================ */
+
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: #A32035;
+}
+
+.md-typeset .admonition.tip > .admonition-title,
+.md-typeset details.tip > summary {
+  background-color: rgba(163, 32, 53, 0.08);
+}
+
+.md-typeset .admonition.tip > .admonition-title::before,
+.md-typeset details.tip > summary::before {
+  background-color: #A32035;
+  -webkit-mask-image: var(--md-admonition-icon--tip);
+          mask-image: var(--md-admonition-icon--tip);
+}
+
+/* ================================================================
+   TABLE overflow fix
+   ================================================================ */
+
+@media screen and (min-width: 767px) {
+  .md-typeset .md-typeset__table {
+    overflow: auto !important;
+  }
+
+  .md-typeset table:not([class]) td {
+    white-space: normal !important;
+  }
+}
+
+/* ================================================================
+   HAMBURGER TOGGLE — sidebar collapse (extra.js)
+   ================================================================ */
+
+button.nav-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--md-primary-bg-color);
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+body.nav-collapsed .md-sidebar--primary {
+  transform: translateX(-100%);
+}
+
+body.nav-collapsed .md-content {
+  margin-left: 0;
+}
