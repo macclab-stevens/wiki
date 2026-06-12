@@ -85,12 +85,21 @@
 }
 
 /* ================================================================
-   HEADER
+   HEADER — hidden; everything lives in the left sidebar
    ================================================================ */
 
 .md-header {
-  background-color: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
+  display: none !important;
+}
+
+/* Fill the space the header used to occupy */
+.md-sidebar {
+  top: 0 !important;
+  height: 100vh !important;
+}
+
+.md-main {
+  padding-top: 0 !important;
 }
 
 /* ================================================================
