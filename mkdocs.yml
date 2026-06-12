@@ -8,6 +8,19 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - navigation.sections
     - navigation.expand
@@ -55,6 +68,16 @@ nav:
       - Slurm: troubleshooting/slurm.md
       - Python Environments: troubleshooting/python-environments.md
       - GPU: troubleshooting/gpu.md
+  - Tutorials:
+      - Overview: tutorials/index.md
+      - Git Setup and Workflow: tutorials/git-workflow.md
+      - 5G gNB Setup (B210 + Open5GS): tutorials/5g-gnb-b210-open5gs.md
+      - srsUE on Raspberry Pi 5 (bladeRF): tutorials/srsue-rpi5-bladerf.md
+      - UE iperf3 Testing: tutorials/ue-iperf3.md
+      - SIM Card Provisioning: tutorials/simcard-provisioning.md
+      - FN990A28 5G Modem Setup: tutorials/fn990a28-modem.md
+      - Drone - Voxel Flight 2 (5G Deck): tutorials/drone-voxel-5g.md
+      - UML in GitHub: tutorials/uml-github.md
   - Contributing: contributing.md
 
 markdown_extensions:
