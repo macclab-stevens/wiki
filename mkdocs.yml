@@ -9,8 +9,12 @@ edit_uri: edit/main/docs/
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/extra.js
+
 theme:
   name: material
+  logo: images/logo.svg
   palette:
     - scheme: default
       primary: custom
@@ -26,9 +30,9 @@ theme:
         name: Switch to light mode
   features:
     - navigation.sections
-    - navigation.expand
     - navigation.top
     - navigation.indexes
+    - navigation.instant
     - search.suggest
     - search.highlight
     - content.code.copy

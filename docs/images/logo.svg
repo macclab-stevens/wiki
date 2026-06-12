@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44">
+  <!-- Hexagon — tech/computing motif -->
+  <polygon points="22,2 40,12 40,32 22,42 4,32 4,12"
+           fill="none" stroke="currentColor" stroke-width="2.5"
+           stroke-linejoin="round"/>
+  <!-- MACC Lab monogram -->
+  <text x="22" y="22"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="14"
+        font-weight="800"
+        letter-spacing="0.5"
+        fill="currentColor">ML</text>
+</svg>

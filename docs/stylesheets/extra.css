@@ -24,19 +24,72 @@
   --md-accent-fg-color--transparent: rgba(224, 96, 122, 0.1);
 }
 
-/* ---------- Header — toggle pinned to right ---------- */
+/* ---------- Header layout ---------- */
 .md-header__inner {
   display: flex;
   align-items: center;
+  padding: 0 0.4rem;
 }
 
+/* Hamburger toggle button (injected by extra.js) */
+.md-header__button.nav-toggle {
+  order: -1;
+  margin-right: 0.2rem;
+  flex-shrink: 0;
+}
+
+/* Logo compact sizing */
+.md-header__button.md-logo {
+  padding: 0.2rem 0.4rem;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.6rem;
+  width: auto;
+}
+
+/* Site title — left-align, don't grow too wide */
 .md-header__title {
   flex-grow: 1;
+  font-size: 0.9rem;
+  margin-left: 0.2rem;
 }
 
+/* Compact search bar */
+.md-search__form {
+  border-radius: 0.15rem;
+}
+
+.md-search__input {
+  font-size: 0.8rem;
+  padding-left: 2.2rem;
+  height: 2rem;
+}
+
+/* Dark/light palette toggle pinned to far right */
 .md-header__button[data-md-toggle="palette"] {
-  margin-left: 0.4rem;
+  margin-left: 0.2rem;
   order: 99;
+}
+
+/* ---------- Collapsible sidebar — desktop ---------- */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                min-width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  body.nav-collapsed .md-sidebar--primary {
+    width: 0 !important;
+    min-width: 0 !important;
+    overflow: hidden;
+  }
+
+  body.nav-collapsed .md-sidebar--primary .md-sidebar__scrollwrap {
+    opacity: 0;
+    transition: opacity 0.15s ease;
+  }
 }
 
 /* ---------- Sidebar nav — active item ---------- */
