@@ -20,46 +20,46 @@
 }
 
 /* ================================================================
-   DARK LEFT SIDEBAR — light mode only
+   DARK LEFT SIDEBAR — always, both light and dark mode
    ================================================================ */
 
-[data-md-color-scheme="default"] .md-sidebar--primary {
+.md-sidebar--primary {
   background-color: #2a2828;
 }
 
 /* Site title / nav back-button strip */
-[data-md-color-scheme="default"] .md-nav--primary .md-nav__title {
+.md-nav--primary .md-nav__title {
   background-color: #343131;
   color: #d9d9d9;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 /* Top-most title (site name label) */
-[data-md-color-scheme="default"] .md-nav--primary > .md-nav__title[for="__drawer"] {
+.md-nav--primary > .md-nav__title[for="__drawer"] {
   background-color: #A32035;
   color: #ffffff;
 }
 
 /* All nav links in the left sidebar */
-[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__link {
+.md-sidebar--primary .md-nav__link {
   color: #c8c8c8;
 }
 
-[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__link:hover,
-[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__link:focus {
+.md-sidebar--primary .md-nav__link:hover,
+.md-sidebar--primary .md-nav__link:focus {
   color: #ffffff;
   background-color: rgba(163, 32, 53, 0.22);
   border-radius: 2px;
 }
 
 /* Active / current page link */
-[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__item--active > .md-nav__link {
+.md-sidebar--primary .md-nav__item--active > .md-nav__link {
   color: #ffffff;
   font-weight: 600;
 }
 
 /* Section header links (navigation.sections top-level labels) */
-[data-md-color-scheme="default"] .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav__link {
+.md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav__link {
   color: #b8b8b8;
   font-size: 0.72rem;
   font-weight: 700;
@@ -68,19 +68,19 @@
 }
 
 /* Active section header */
-[data-md-color-scheme="default"] .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
+.md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
   color: #ffffff;
   background-color: #A32035;
   border-radius: 2px;
 }
 
 /* Nested nav list backgrounds */
-[data-md-color-scheme="default"] .md-sidebar--primary .md-nav {
+.md-sidebar--primary .md-nav {
   background-color: transparent;
 }
 
 /* Sidebar scrollbar */
-[data-md-color-scheme="default"] .md-sidebar--primary .md-sidebar__scrollwrap {
+.md-sidebar--primary .md-sidebar__scrollwrap {
   scrollbar-color: #555 #2a2828;
 }
 
