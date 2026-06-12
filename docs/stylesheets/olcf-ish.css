@@ -24,43 +24,43 @@
    ================================================================ */
 
 .md-sidebar--primary {
-  background-color: #2a2828;
+  background-color: #2a2828 !important;
 }
 
 /* Site title / nav back-button strip */
 .md-nav--primary .md-nav__title {
-  background-color: #343131;
-  color: #d9d9d9;
+  background-color: #343131 !important;
+  color: #d9d9d9 !important;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 /* Top-most title (site name label) */
 .md-nav--primary > .md-nav__title[for="__drawer"] {
-  background-color: #A32035;
-  color: #ffffff;
+  background-color: #A32035 !important;
+  color: #ffffff !important;
 }
 
 /* All nav links in the left sidebar */
 .md-sidebar--primary .md-nav__link {
-  color: #c8c8c8;
+  color: #c8c8c8 !important;
 }
 
 .md-sidebar--primary .md-nav__link:hover,
 .md-sidebar--primary .md-nav__link:focus {
-  color: #ffffff;
-  background-color: rgba(163, 32, 53, 0.22);
+  color: #ffffff !important;
+  background-color: rgba(163, 32, 53, 0.22) !important;
   border-radius: 2px;
 }
 
 /* Active / current page link */
 .md-sidebar--primary .md-nav__item--active > .md-nav__link {
-  color: #ffffff;
+  color: #ffffff !important;
   font-weight: 600;
 }
 
 /* Section header links (navigation.sections top-level labels) */
 .md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav__link {
-  color: #b8b8b8;
+  color: #b8b8b8 !important;
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -69,14 +69,14 @@
 
 /* Active section header */
 .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
-  color: #ffffff;
-  background-color: #A32035;
+  color: #ffffff !important;
+  background-color: #A32035 !important;
   border-radius: 2px;
 }
 
 /* Nested nav list backgrounds */
 .md-sidebar--primary .md-nav {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 /* Sidebar scrollbar */
