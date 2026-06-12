@@ -16,45 +16,42 @@ theme:
   navigation_depth: 3
   sticky_navigation: true
 
+validation:
+  nav:
+    omitted_files: info
+
 nav:
   - Home: index.md
   - Getting Started:
-      - Overview: getting-started/index.md
       - Accounts: getting-started/accounts.md
       - SSH Access: getting-started/ssh.md
       - First Login: getting-started/first-login.md
   - HPC:
-      - Overview: hpc/index.md
       - Storage: hpc/storage.md
       - Slurm: hpc/slurm.md
       - GPU Jobs: hpc/gpu-jobs.md
       - Interactive Jobs: hpc/interactive-jobs.md
       - Common Errors: hpc/common-errors.md
   - Open OnDemand:
-      - Overview: open-ondemand/index.md
       - Jupyter: open-ondemand/jupyter.md
       - VS Code: open-ondemand/vscode.md
       - Troubleshooting: open-ondemand/troubleshooting.md
   - Software:
-      - Overview: software/index.md
       - Python: software/python.md
       - Conda / Mamba: software/conda-mamba.md
       - Containers: software/containers.md
       - PyTorch / TensorFlow: software/pytorch-tensorflow.md
   - Lab Guides:
-      - Overview: lab-guides/index.md
       - Onboarding: lab-guides/onboarding.md
       - GitHub Workflow: lab-guides/github-workflow.md
       - Data Storage Rules: lab-guides/data-storage-rules.md
       - Equipment: lab-guides/equipment.md
   - Troubleshooting:
-      - Overview: troubleshooting/index.md
       - Open OnDemand: troubleshooting/open-ondemand.md
       - Slurm: troubleshooting/slurm.md
       - Python Environments: troubleshooting/python-environments.md
       - GPU: troubleshooting/gpu.md
   - Tutorials:
-      - Overview: tutorials/index.md
       - Git Setup and Workflow: tutorials/git-workflow.md
       - 5G gNB Setup (B210 + Open5GS): tutorials/5g-gnb-b210-open5gs.md
       - srsUE on Raspberry Pi 5 (bladeRF): tutorials/srsue-rpi5-bladerf.md
