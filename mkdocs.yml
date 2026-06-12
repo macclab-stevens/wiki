@@ -9,34 +9,12 @@ edit_uri: edit/main/docs/
 extra_css:
   - stylesheets/extra.css
 
-extra_javascript:
-  - javascripts/extra.js
-
 theme:
-  name: material
+  name: readthedocs
   logo: images/logo.svg
-  palette:
-    - scheme: default
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-  features:
-    - navigation.sections
-    - navigation.top
-    - navigation.indexes
-    - navigation.instant
-    - search.suggest
-    - search.highlight
-    - content.code.copy
-    - content.action.edit
+  collapse_navigation: true
+  navigation_depth: 3
+  sticky_navigation: true
 
 nav:
   - Home: index.md

@@ -1,133 +1,194 @@
 /* ================================================================
    Stevens Institute of Technology — MACC Lab
-   Primary brand color: Cardinal Red #A32035
+   MkDocs ReadTheDocs theme — Cardinal Red #A32035
+   Modelled on OLCF user-docs theme conventions
    ================================================================ */
 
-/* ---------- Light mode ---------- */
-[data-md-color-scheme="default"] {
-  --md-primary-fg-color:             #A32035;
-  --md-primary-fg-color--light:      #c2354a;
-  --md-primary-fg-color--dark:       #7d1828;
-  --md-primary-bg-color:             #ffffff;
-  --md-primary-bg-color--light:      rgba(255, 255, 255, 0.7);
-  --md-accent-fg-color:              #A32035;
-  --md-accent-fg-color--transparent: rgba(163, 32, 53, 0.1);
-  --md-accent-bg-color:              #ffffff;
+/* --- Layout: widen content area (OLCF uses 1200px) --- */
+.wy-nav-content {
+  max-width: 1200px;
 }
 
-/* ---------- Dark mode ---------- */
-[data-md-color-scheme="slate"] {
-  --md-primary-fg-color:             #A32035;
-  --md-primary-fg-color--light:      #c2354a;
-  --md-primary-fg-color--dark:       #7d1828;
-  --md-accent-fg-color:              #e0607a;
-  --md-accent-fg-color--transparent: rgba(224, 96, 122, 0.1);
+/* --- Sidebar background: dark charcoal (OLCF style) --- */
+.wy-nav-side {
+  background-color: #343131;
 }
 
-/* ---------- Header layout ---------- */
-.md-header__inner {
-  display: flex;
-  align-items: center;
-  padding: 0 0.4rem;
+/* --- Sidebar nav-search header: Stevens Cardinal Red --- */
+.wy-side-nav-search {
+  background-color: #A32035;
 }
 
-/* Hamburger toggle button (injected by extra.js) */
-.md-header__button.nav-toggle {
-  order: -1;
-  margin-right: 0.2rem;
-  flex-shrink: 0;
+.wy-side-nav-search > a,
+.wy-side-nav-search .wy-dropdown > a {
+  color: #ffffff;
 }
 
-/* Logo compact sizing */
-.md-header__button.md-logo {
-  padding: 0.2rem 0.4rem;
+.wy-side-nav-search > a:hover,
+.wy-side-nav-search .wy-dropdown > a:hover {
+  background-color: #7d1828;
 }
 
-.md-header__button.md-logo img,
-.md-header__button.md-logo svg {
-  height: 1.6rem;
-  width: auto;
+.wy-side-nav-search input[type="text"] {
+  border-color: #7d1828;
+  border-radius: 2px;
 }
 
-/* Site title — left-align, don't grow too wide */
-.md-header__title {
-  flex-grow: 1;
-  font-size: 0.9rem;
-  margin-left: 0.2rem;
+/* Logo sizing in sidebar */
+.wy-side-nav-search > a img.logo,
+.wy-side-nav-search > a > img {
+  max-width: 36px;
+  padding-bottom: 8px;
 }
 
-/* Compact search bar */
-.md-search__form {
-  border-radius: 0.15rem;
+/* Disable default pointer-events on logo anchor (content link remains clickable) */
+.wy-side-nav-search > a {
+  pointer-events: none;
+  cursor: default;
+}
+.wy-side-nav-search > a > a {
+  pointer-events: auto !important;
+  cursor: pointer !important;
 }
 
-.md-search__input {
-  font-size: 0.8rem;
-  padding-left: 2.2rem;
-  height: 2rem;
+/* --- Sidebar nav link colors --- */
+.wy-menu-vertical a {
+  color: #d9d9d9;
 }
 
-/* Dark/light palette toggle pinned to far right */
-.md-header__button[data-md-toggle="palette"] {
-  margin-left: 0.2rem;
-  order: 99;
+.wy-menu-vertical a:hover {
+  background-color: rgba(163, 32, 53, 0.18);
+  color: #ffffff;
 }
 
-/* ---------- Collapsible sidebar — desktop ---------- */
-@media screen and (min-width: 76.25em) {
-  .md-sidebar--primary {
-    transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-                min-width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+/* Top-level active section */
+.wy-menu-vertical li.toctree-l1.current > a {
+  background-color: #7d1828;
+  color: #ffffff;
+  border: none;
+}
+
+/* Active sub-item background */
+.wy-menu-vertical li.current > a,
+.wy-menu-vertical li.on > a {
+  background-color: rgba(163, 32, 53, 0.12);
+  color: #d9d9d9;
+}
+
+.wy-menu-vertical li.current > a:hover,
+.wy-menu-vertical li.on > a:hover {
+  background-color: rgba(163, 32, 53, 0.25);
+  color: #ffffff;
+}
+
+/* Current page item */
+.wy-menu-vertical li.current.toctree-l2 > a,
+.wy-menu-vertical li.current.toctree-l3 > a {
+  background-color: #A32035;
+  color: #ffffff;
+}
+
+/* Section caption headers */
+.wy-menu-vertical p.caption {
+  color: #b0b0b0;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Sub-nav list background */
+.wy-menu-vertical li.current ul,
+.wy-menu-vertical li.toctree-l1.current ul {
+  background-color: #2a2828;
+}
+
+/* --- Mobile header: Cardinal Red --- */
+.wy-nav-top {
+  background-color: #A32035;
+  color: #ffffff;
+}
+
+.wy-nav-top a {
+  color: #ffffff;
+}
+
+/* --- Content links: Cardinal Red --- */
+a {
+  color: #A32035;
+}
+
+a:hover {
+  color: #7d1828;
+}
+
+.rst-content a {
+  color: #A32035;
+}
+
+.rst-content a:hover {
+  color: #7d1828;
+}
+
+/* Visited links stay readable */
+a:visited {
+  color: #7d1828;
+}
+
+/* --- Inline code: subtle Cardinal Red tint --- */
+.rst-content code.literal,
+.rst-content tt.literal {
+  color: #7d1828;
+  background-color: #fdf5f6;
+  border: 1px solid #e8d0d3;
+  border-radius: 2px;
+  padding: 1px 4px;
+  font-size: 0.875em;
+}
+
+/* --- Table overflow fix (from OLCF theme_overrides.css) --- */
+@media screen and (min-width: 767px) {
+  .wy-table-responsive table td {
+    white-space: normal !important;
   }
 
-  body.nav-collapsed .md-sidebar--primary {
-    width: 0 !important;
-    min-width: 0 !important;
-    overflow: hidden;
-  }
-
-  body.nav-collapsed .md-sidebar--primary .md-sidebar__scrollwrap {
-    opacity: 0;
-    transition: opacity 0.15s ease;
+  .wy-table-responsive {
+    overflow: auto !important;
   }
 }
 
-/* ---------- Sidebar nav — active item ---------- */
-.md-nav__item--active > .md-nav__link {
-  color: var(--md-accent-fg-color);
-  font-weight: 600;
+/* --- Admonition: tip gets Cardinal Red accent --- */
+.rst-content .admonition.tip {
+  border-top-color: #A32035;
 }
 
-/* ---------- Footer ---------- */
-.md-footer {
-  background-color: #4a4a4a;
+.rst-content .admonition.tip > .admonition-title {
+  background-color: rgba(163, 32, 53, 0.08);
+  color: #A32035;
 }
 
-.md-footer-meta {
-  background-color: #333333;
+/* --- Breadcrumb edit link --- */
+.wy-breadcrumbs-aside a {
+  color: #A32035;
 }
 
-/* ---------- Typeset links ---------- */
-.md-typeset a {
-  color: var(--md-accent-fg-color);
+.wy-breadcrumbs-aside a:hover {
+  color: #7d1828;
 }
 
-.md-typeset a:hover {
-  color: var(--md-primary-fg-color--dark);
+/* --- Footer --- */
+footer {
+  background-color: #2a2828;
+  color: #c2c2c2;
 }
 
-/* ---------- Tip admonition accent ---------- */
-.md-typeset .admonition.tip,
-.md-typeset details.tip {
-  border-color: var(--md-accent-fg-color);
+footer a {
+  color: #e0607a;
 }
 
-.md-typeset .admonition.tip > .admonition-title,
-.md-typeset details.tip > summary {
-  background-color: var(--md-accent-fg-color--transparent);
+footer a:hover {
+  color: #ffffff;
 }
 
-.md-typeset .admonition.tip > .admonition-title::before,
-.md-typeset details.tip > summary::before {
-  background-color: var(--md-accent-fg-color);
+/* --- Version badge / versionmodified --- */
+.rst-content .versionmodified {
+  color: #A32035;
 }
