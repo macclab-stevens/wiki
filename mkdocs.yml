@@ -28,11 +28,16 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  font:
+    text: Lato
+    code: Source Code Pro
   features:
     - navigation.sections
     - navigation.top
     - navigation.indexes
     - navigation.instant
+    - navigation.breadcrumbs
+    - navigation.footer
     - search.suggest
     - search.highlight
     - content.code.copy

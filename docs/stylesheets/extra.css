@@ -131,3 +131,26 @@
 .md-typeset details.tip > summary::before {
   background-color: var(--md-accent-fg-color);
 }
+
+/* ---------- RTD-style dark sidebar (light mode only) ---------- */
+[data-md-color-scheme="default"] .md-sidebar--primary {
+  background-color: #343131;
+}
+
+[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__title,
+[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__link {
+  color: #d9d9d9;
+}
+
+[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__link:hover {
+  color: #ffffff;
+}
+
+[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__item--active > .md-nav__link {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+[data-md-color-scheme="default"] .md-sidebar--primary .md-sidebar__scrollwrap {
+  scrollbar-color: #555 #343131;
+}
