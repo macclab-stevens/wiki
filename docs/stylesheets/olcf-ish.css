@@ -161,24 +161,37 @@
 }
 
 /* ================================================================
-   HAMBURGER TOGGLE — sidebar collapse (extra.js)
+   SEARCH — moved into left sidebar by extra.js
    ================================================================ */
 
-button.nav-toggle {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: var(--md-primary-bg-color);
-  padding: 0.4rem;
+.md-sidebar--primary .md-search {
+  padding: 0.5rem 0.6rem 0.3rem;
+  display: block;
+}
+
+.md-sidebar--primary .md-search__form {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 4px;
+  height: 2.2rem;
   display: flex;
   align-items: center;
-  line-height: 1;
 }
 
-body.nav-collapsed .md-sidebar--primary {
-  transform: translateX(-100%);
+.md-sidebar--primary .md-search__form:hover,
+.md-sidebar--primary .md-search__form:focus-within {
+  background-color: rgba(255, 255, 255, 0.18) !important;
 }
 
-body.nav-collapsed .md-content {
-  margin-left: 0;
+.md-sidebar--primary .md-search__input {
+  color: #ffffff !important;
+  background: transparent !important;
+  font-size: 0.8rem;
+}
+
+.md-sidebar--primary .md-search__input::placeholder {
+  color: rgba(200, 200, 200, 0.55) !important;
+}
+
+.md-sidebar--primary .md-search__icon {
+  color: #c8c8c8 !important;
 }
