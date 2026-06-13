@@ -1,6 +1,6 @@
 /* ================================================================
    MACC Lab — MkDocs Material Theme
-   OLCF-inspired: dark left sidebar, Cardinal Red #A32035
+   OLCF-inspired: dark left sidebar in dark mode, Cardinal Red #A32035
    ================================================================ */
 
 /* --- Custom primary/accent palette colors --- */
@@ -14,108 +14,21 @@
   --md-primary-bg-color--light:       rgba(255, 255, 255, 0.7);
 }
 
-/* --- Widen content area (OLCF uses ~1200px) --- */
+/* --- Widen content area --- */
 .md-grid {
   max-width: 1200px;
 }
 
 /* ================================================================
-   DARK LEFT SIDEBAR — always, both light and dark mode
+   SIDEBAR TITLE — hide site name/logo block
    ================================================================ */
 
-.md-sidebar--primary {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  height: 100vh !important;
-  z-index: 200 !important;
-  background-color: #2a2828 !important;
-  overflow: hidden;
-}
-
-.md-sidebar--primary .md-sidebar__scrollwrap {
-  height: 100vh !important;
-  max-height: 100vh !important;
-  overflow-y: auto;
-}
-
-/* Site title / nav back-button strip */
-.md-nav--primary .md-nav__title {
-  background-color: #343131 !important;
-  color: #d9d9d9 !important;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
-}
-
-/* Top-most title (site name label) */
 .md-nav--primary > .md-nav__title[for="__drawer"] {
-  background-color: #A32035 !important;
-  color: #ffffff !important;
-}
-
-/* All nav links in the left sidebar */
-.md-sidebar--primary .md-nav__link {
-  color: #c8c8c8 !important;
-}
-
-.md-sidebar--primary .md-nav__link:hover,
-.md-sidebar--primary .md-nav__link:focus {
-  color: #ffffff !important;
-  background-color: rgba(163, 32, 53, 0.22) !important;
-  border-radius: 2px;
-}
-
-/* Active / current page link */
-.md-sidebar--primary .md-nav__item--active > .md-nav__link {
-  color: #ffffff !important;
-  font-weight: 600;
-}
-
-/* Section header links (navigation.sections top-level labels) */
-.md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav__link {
-  color: #b8b8b8 !important;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-}
-
-/* Active section header */
-.md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
-  color: #ffffff !important;
-  background-color: #A32035 !important;
-  border-radius: 2px;
-}
-
-/* Nested nav list backgrounds */
-.md-sidebar--primary .md-nav {
-  background-color: transparent !important;
-}
-
-/* Sidebar scrollbar */
-.md-sidebar--primary .md-sidebar__scrollwrap {
-  scrollbar-color: #555 #2a2828;
+  display: none;
 }
 
 /* ================================================================
-   HEADER — hidden; everything lives in the left sidebar
-   ================================================================ */
-
-.md-header {
-  display: none !important;
-}
-
-/* Fill the space the header used to occupy */
-.md-sidebar {
-  top: 0 !important;
-  height: 100vh !important;
-}
-
-.md-main {
-  padding-top: 0 !important;
-}
-
-/* ================================================================
-   CONTENT AREA — links
+   CONTENT AREA — links (light mode)
    ================================================================ */
 
 [data-md-color-scheme="default"] .md-typeset a {
@@ -170,46 +83,4 @@
   .md-typeset table:not([class]) td {
     white-space: normal !important;
   }
-}
-
-/* ================================================================
-   SEARCH — moved into left sidebar by extra.js
-   ================================================================ */
-
-.md-sidebar--primary .md-search {
-  display: block;
-  padding: 0.5rem 0.75rem;
-}
-
-.md-sidebar--primary .md-search__form {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border-radius: 4px;
-  height: 1.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 90%;
-}
-
-.md-sidebar--primary .md-search__form:hover,
-.md-sidebar--primary .md-search__form:focus-within {
-  background-color: rgba(255, 255, 255, 0.18) !important;
-}
-
-.md-sidebar--primary .md-search__input {
-  color: #ffffff !important;
-  background: transparent !important;
-  font-size: 0.75rem;
-  padding: 0 0.3rem !important;
-}
-
-.md-sidebar--primary .md-search__input::placeholder {
-  color: rgba(200, 200, 200, 0.55) !important;
-}
-
-.md-sidebar--primary .md-search__icon {
-  color: #c8c8c8 !important;
-  width: 1.6rem !important;
-  height: 1.6rem !important;
 }

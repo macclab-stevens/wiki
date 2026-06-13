@@ -13,8 +13,8 @@ extra_javascript:
 
 theme:
   name: material
-  logo: images/logo.svg
-  favicon: images/logo.svg
+  logo: images/StevensLogo.png
+  favicon: images/StevensLogo.png
   palette:
     - scheme: default
       primary: custom
