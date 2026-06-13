@@ -72,8 +72,18 @@
 }
 
 /* ================================================================
-   TABLE overflow fix
+   TABLES — compact rendering
    ================================================================ */
+
+.md-typeset table:not([class]) {
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  padding: 0.4em 0.7em;
+}
 
 @media screen and (min-width: 767px) {
   .md-typeset .md-typeset__table {

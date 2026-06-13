@@ -48,6 +48,7 @@ nav:
       - First Login: getting-started/first-login.md
   - HPC Cluster:
       - Overview: hpc/index.md
+      - Hardware: hpc/hardware.md
       - Storage: hpc/storage.md
       - Open OnDemand:
           - Overview: open-ondemand/index.md
