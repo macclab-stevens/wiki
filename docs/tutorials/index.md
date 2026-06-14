@@ -6,7 +6,7 @@ This section contains tutorials and how-to guides contributed by MACC Lab member
 
 | Tutorial | Description |
 |---|---|
-| [Git Setup and Workflow](git-workflow.md) | Lab standard Git workflow — one-time setup, branching, commits, PRs, force-push rules |
+| [srsRAN Fuzz Testing](srsran-fuzz-testing.md) | Conceptual background plus before/after fuzz testing procedure against srsRAN |
 | [5G gNB Setup (B210 + Open5GS)](5g-gnb-b210-open5gs.md) | Setting up a 5G gNB using a B200 SDR with srsRAN and Open5GS |
 | [srsUE on Raspberry Pi 5 (bladeRF)](srsue-rpi5-bladerf.md) | Running srsUE as a 5G UE on a Raspberry Pi 5 with bladeRF SDR |
 | [UE iperf3 Testing](ue-iperf3.md) | Configuring a UE with a static IP for iperf3 network testing |
