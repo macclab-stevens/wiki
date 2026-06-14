@@ -58,5 +58,5 @@ Once you're familiar with the components above, move on to:
 
 - [LTE Setup Guide — srsRAN 22.04.1 documentation](https://docs.srsran.com/projects/4g/en/latest/app_notes/source/zeromq/source/index.html)
 - [ZeroMQ — Get Started](https://zeromq.org/get-started/)
-- *Fuzz Testing Architecture Used for Vulnerability Detection in Wireless Systems*
+- [Fuzz Testing Architecture Used for Vulnerability Detection in Wireless Systems](https://vtechworks.lib.vt.edu/server/api/core/bitstreams/3be5d061-041e-48da-81e0-e54c45cde529/content)
 - [WinSCP](https://winscp.net/eng/index.php)
