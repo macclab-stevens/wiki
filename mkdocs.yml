@@ -81,6 +81,8 @@ nav:
   - Tutorials:
       - Overview: tutorials/index.md
       - Git Setup and Workflow: tutorials/git-workflow.md
+      - srsRAN Intro (srsRAN, ZeroMQ, Fuzz Testing): tutorials/srsran-intro.md
+      - srsRAN Fuzz Testing: tutorials/srsran-fuzz-testing.md
       - 5G gNB Setup (B210 + Open5GS): tutorials/5g-gnb-b210-open5gs.md
       - srsUE on Raspberry Pi 5 (bladeRF): tutorials/srsue-rpi5-bladerf.md
       - UE iperf3 Testing: tutorials/ue-iperf3.md
