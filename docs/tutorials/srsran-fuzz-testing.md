@@ -1,8 +1,49 @@
-# Overview of Fuzz Testing
+# srsRAN Fuzz Testing
 
-> Source: *MACC: Intro to Fuzz Testing* (S. Korczuk, 2022)
+> Source: *MACC: Intro to srsRAN* and *Intro to Fuzz Testing* (S. Korczuk, 2022)
 
-> **Prerequisites:** This guide assumes you've read [Introduction to srsRAN, ZeroMQ, and Fuzz Testing](srsran-intro.md).
+This guide covers the conceptual background (srsRAN, ZeroMQ, fuzz testing) and the hands-on procedure for running before- and after-fuzz tests against srsRAN.
+
+---
+
+## Concepts
+
+### srsRAN
+
+srsRAN is a 4G and 5G software radio suite. It includes:
+
+**srsUE** — a full-stack 4G and 5G NSA/SA UE application.
+
+- **NSA** — non-standalone (5G built on top of an existing 4G infrastructure)
+- **UE** — user equipment
+
+**srsENB**
+
+- **eNodeB** — element in the E-UTRA of LTE; hardware connected to the mobile network that communicates wirelessly with handsets
+- **gNodeB** — a 3GPP-compliant implementation of the 5G-NR base station
+
+**srsEPC** — a lightweight 4G EPC implementation with MME, HSS, and S/P-GW.
+
+### ZeroMQ (ZMQ)
+
+A high-performance asynchronous messaging library. It provides a message queue and can run without a dedicated message broker.
+
+**The four "zeros":**
+
+- Zero broker
+- Zero latency
+- Zero cost
+- Zero administration
+
+`libzmq` is the low-level library behind most language bindings.
+
+### Fuzz Testing
+
+Fuzz testing generates and injects random or unexpected inputs ("fuzzed" inputs) — similar in spirit to brute-force testing. The goal is to observe how the system reacts; an adverse reaction signals a possible vulnerability.
+
+In this work, fuzz testing is applied to 5G wireless systems to surface vulnerabilities.
+
+---
 
 ## Tools You'll Need
 
