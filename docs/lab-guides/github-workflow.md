@@ -413,36 +413,90 @@ Enable these on `main` in every lab repo via GitHub Settings → Branches. A mai
 
 ## Quick Reference
 
-Save this or pin it somewhere visible.
+A working contributor's cheat sheet — copy the script, scan the tables, and keep the recovery box bookmarked.
 
+### The full flow — one-click copy
+
+```bash
+# 1. Start from latest main
+git checkout main && git pull --rebase
+
+# 2. New branch
+git checkout -b feature/descriptive-name
+
+# 3. Check baseline
+git status && git log --oneline -10
+
+# 4–5. Edit, then stage + commit (review first)
+git status
+git diff
+git add <files>
+git commit -m "type: description"
+
+# 6. Rebase onto latest main before pushing
+git fetch origin && git rebase origin/main
+
+# 7. Push (first time uses -u; after rebase use --force-with-lease)
+git push -u origin feature/descriptive-name
+# git push --force-with-lease
+
+# 8–9. Open PR on GitHub, address review with new commits
+git commit -m "fix: address review feedback" && git push
+
+# 10. Squash & Merge on GitHub
+
+# 11. Clean up
+git checkout main && git pull --rebase
+git branch -d feature/descriptive-name
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                    DAILY WORKFLOW                                │
-├──────┬──────────────────────────────────────────────────────────┤
-│  1   │ git checkout main && git pull --rebase                   │
-│  2   │ git checkout -b feature/name                             │
-│  3   │ git status && git diff          ← always check first     │
-│  4   │ [make small, logical changes]                            │
-│  5   │ git add <files> && git commit -m "type: description"     │
-│  6   │ git fetch origin && git rebase origin/main               │
-│  7   │ git push -u origin feature/name                          │
-│      │ git push --force-with-lease     ← after rebasing         │
-│  8   │ [open PR on GitHub, fill description]                    │
-│  9   │ git commit + git push           ← address review         │
-│  10  │ [Squash & Merge on GitHub]                               │
-│  11  │ git checkout main && git pull --rebase                   │
-│      │ git branch -d feature/name                               │
-└──────┴──────────────────────────────────────────────────────────┘
 
-COMMIT TYPES: feat | fix | analysis | data | docs | refactor | test | chore | wip
+### At-a-glance lookups
 
-FORCE PUSH:  --force-with-lease  ✅   --force  ❌   main  ❌ never
+**Commit type** → see [Commit Message Format](#commit-message-format) for full examples.
 
-MERGE STRATEGY: Squash & Merge (default) | Rebase & Merge (clean branches only)
+| Type | Use for |
+|---|---|
+| `feat` | New feature or capability |
+| `fix` | Bug fix |
+| `analysis` | Research analysis, findings, experiments |
+| `data` | Data pipeline / schema changes |
+| `docs` | Documentation only |
+| `refactor` | Code change with no behavioural effect |
+| `test` | Adding or updating tests |
+| `chore` | Build, dependencies, tooling |
+| `wip` | Work in progress — squash before PR |
 
-IF IN DOUBT: git status — always your first command
-             git rebase --abort — always your escape hatch
-```
+**Force push** → see [Force Push Rules](#force-push-rules) for the full table.
+
+| Situation | OK? |
+|---|---|
+| Own feature branch, before PR is open | ✅ `--force-with-lease` |
+| Amending your own commit during dev | ✅ `--force-with-lease` |
+| PR is open and under review | ⚠️ Add new commits instead |
+| Shared branch or `main` | ❌ Never |
+
+**Merge strategy** → see [The Squash vs Rebase Question](#the-squash-vs-rebase-question).
+
+| Strategy | When |
+|---|---|
+| **Squash & Merge** ✓ | Default — keeps `main` a clean changelog |
+| **Rebase & Merge** | Commits already clean and individually meaningful |
+| **Merge commit** ✗ | Avoid — adds noise to `main` |
+
+### When things go wrong
+
+!!! warning "Recovery commands"
+
+    Keep these handy — they are the ones you'll wish you knew when something breaks.
+
+    | Command | What it does |
+    |---|---|
+    | `git status` | Universal first command — always your starting point when confused |
+    | `git rebase --abort` | Bail out of an in-progress rebase, return to pre-rebase state |
+    | `git stash` / `git stash pop` | Park uncommitted work to switch branches; restore it after |
+    | `git reset --soft HEAD~1` | Un-commit the last commit but keep the changes staged |
+    | `git checkout -- <file>` | Discard local edits to a single file |
+    | `git reflog` | Find a "lost" commit after a bad rebase or reset — nothing is truly gone for ~90 days |
 
 ---
 
