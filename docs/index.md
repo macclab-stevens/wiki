@@ -1,8 +1,10 @@
 # MACC Lab Documentation
 
-Welcome to the MACC Lab technical documentation hub.
+Welcome to the Mobile AI Cybersecurity Computing (MACC) Lab technical documentation hub.
 
 This site contains guides for using lab computing resources, HPC access, Open OnDemand, Slurm jobs, software environments, and lab workflows.
+
+Additionally a consortment of Tutorials have been made by lab members on specialized topics pertaining to the lab's research areas.
 
 ## Start here
 

@@ -1,6 +1,7 @@
 # HPC
 
 This section covers use of MACC Lab compute resources, including storage, Slurm job submission, GPU usage, and common errors.
+We are currently upgrading our HPC cluster's.
 
 ## Core concepts
 
